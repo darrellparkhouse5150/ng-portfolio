@@ -2,4 +2,216 @@
 
 .lead-card {
     width: 100%;
+    height: 510px;
+    margin-top: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    background: $clr-base-bg;
+    margin-bottom: 50px;
+
+    .header {
+        width: 100%;
+        height: 88px;
+
+        position: relative;
+        border-bottom: 2px solid $clr-base-border;
+
+        .tool-bar {
+            width: 220px;
+            height: 88px;
+            float: left;
+
+            position: relative;
+            left: 70px;
+            top: (88px - 25px) / 2;
+
+            .selector {
+                float: left;
+                margin-right: 20px;
+
+                .down-arrow {
+                    background: url('../imgs/down-arrow.png');
+                    width: 10px;
+                    height: 6px;
+
+                    position: relative;
+                    left: 10px;
+                    top: 5px;
+                }
+            }
+
+            .user,
+            .clock,
+            .update,
+            .delete {
+                position: relative;
+                left: 30px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .user-icon {
+                background: url('../imgs/user-icon.png');
+                width: 16px;
+                height: 16px;
+            }
+
+            .clock-icon {
+                background: url('../imgs/clock-time-icon.png');
+                width: 21px;
+                height: 18px;
+                left: 50px;
+            }
+
+            .update-icon {
+                background: url('../imgs/update.png');
+                width: 18px;
+                height: 14px;
+                left: 70px;
+            }
+
+            .delete-icon {
+                background: url('../imgs/delete-icon.png');
+                width: 14px;
+                height: 18px;
+
+                left: 90px;
+            }
+        }
+
+        .search {
+            float: left;
+            width: 483px;
+            height: 88px;
+            display: inline-block;
+
+            border: {
+                left: 1px solid $clr-base-border;
+                right: 1px solid $clr-base-border
+            }
+
+            position: relative;
+            left: 140px;
+
+            .search-input {
+                width: 300px;
+                border: none;
+                background: transparent;
+                padding-left: 20px;
+                height: 40px;
+                float: left;
+
+                color: $clr-md-gray-text;
+
+                margin-top: (88px - 40px) / 2;
+
+                &::placeholder {
+                    font-family: 'Roboto', sans-serif;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            .search-icon {
+                background: url('../imgs/search-icon.png');
+
+                position: absolute;
+                right: 35px;
+                top: 36px;
+
+                width: 18px;
+                height: 18px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .settings-icon {
+            position: absolute;
+            top: 37px;
+            right: 35px;
+
+            background: url('../imgs/settings-icon.png');
+            width: 20px;
+            height: 20px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .leads-table {
+        width: 775px;
+        margin: 0 auto;
+        padding-left: 30px;
+
+        th, td {
+            color: $clr-md-gray-text;
+        }
+
+        .last {
+            border-bottom: 0;
+        }
+
+        thead {
+            th {
+                font-size: 13px;
+                height: 57px;
+                border-bottom: 1px solid $clr-base-border;
+            }
+        }
+
+        .lead-status {
+            color: $clr-light-text;
+            font-size: 9px;
+            display: inline-block;
+            padding: 6px 9px;
+            font-weight: 900;
+            border-radius: 5px;
+            text-transform: uppercase;
+
+            .initial-contact {
+                background-color: $clr-initial-contact;
+            }
+
+            .offer-made {
+                background-color: $clr-offer-made;
+            }
+
+            .incoming-request {
+                background-color: $clr-incoming-request
+            }
+
+            .negotiations {
+                background-color: $clr-negotiations;
+            }
+
+            .won {
+                background-color: $clr-won-lead;
+            }
+
+            .contract {
+                background-color: $clr-contract;
+            }
+        }
+    }
+
+    .total-sales {
+        color: $clr-light-text;
+        font-weight: 300;
+        font-size: 28px;
+        margin-top: 30px;
+
+        .amount {
+            font-weight: bold;
+            color: darken($clr-won-lead, 20%);
+            margin-left: 30px;
+        }
+    }
 }
